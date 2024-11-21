@@ -7,12 +7,13 @@
     tools:context=".Home">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/l"
-        android:id="@+id/img"/>
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="8dp"
+        android:background="#F5F5F5"
+        android:layout_gravity="center" />
 
 </LinearLayout>
