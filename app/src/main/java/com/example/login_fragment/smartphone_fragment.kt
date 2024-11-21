@@ -65,7 +65,7 @@ class smartphone_fragment : Fragment() {
                     val smartphones = response.body() ?: emptyList()
 
                     val adapter = ProductAdapter(smartphones)
-                    rclView.layoutManager = LinearLayoutManager(context , LinearLayoutManager.HORIZONTAL,false)  // Ajout d'un LayoutManager
+                    rclView.layoutManager = LinearLayoutManager(context , LinearLayoutManager.HORIZONTAL,false)
                     rclView.adapter = adapter
                 } else {
                     Toast.makeText(context, "Failed to load data", Toast.LENGTH_LONG).show()
