@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, Home())
+            .commit()
+
         val nav = findViewById<BottomNavigationView>(R.id.nav)
         nav.setOnItemSelectedListener { menuItem->
             when(menuItem.itemId){
@@ -33,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.second->{
                     loadFragment(Second())
+                    true
+                }
+
+                R.id.smart->{
+                    loadFragment(smartphone_fragment())
                     true
                 }
                 else->false

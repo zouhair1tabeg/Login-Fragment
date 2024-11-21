@@ -14,4 +14,9 @@
         android:id="@+id/second"
         android:icon="@drawable/second"
         android:title="Second"/>
+
+    <item
+        android:id="@+id/smart"
+        android:icon="@drawable/store"
+        android:title="Smartphones"/>
 </menu>

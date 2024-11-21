@@ -58,10 +58,7 @@ class Home : Fragment() {
         val apiService = retrofit.create(ApiService::class.java)
 
         apiService.getWatch().enqueue(object : Callback<List<Smart_Watch>> {
-            override fun onResponse(
-                call: Call<List<Smart_Watch>>,
-                response: Response<List<Smart_Watch>>
-            ) {
+            override fun onResponse(call: Call<List<Smart_Watch>>, response: Response<List<Smart_Watch>>) {
                 if (response.isSuccessful) {
                     val watches = response.body() ?: emptyList()
 
@@ -102,7 +99,7 @@ class Home : Fragment() {
                         }
 
                         val textView3 = TextView(context).apply {
-                            text = "${watch.battery_life} Hr"
+                            text = "${watch.battery_life}"
                             gravity = Gravity.CENTER
                             textSize = 14f
                             setTextColor(Color.BLACK)
